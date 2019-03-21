@@ -11,5 +11,5 @@ mysqli_query($link, "SET CHARACTER SET utf8");
                                                // как ассоциативный массив
       $data[] = $row; // допишем строку из выборки как новый элемент результирующего массива
       }
-  echo json_encode($data, JSON_UNESCAPED_UNICODE); // и отдаём как json
+  echo json_encode($data, JSON_UNESCAPED_UNICODE);
 ?>

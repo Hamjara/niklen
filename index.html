@@ -9,6 +9,10 @@
           rel="stylesheet">
 </head>
 <body>
+	<div class="wrapper">
+            <img src="img/cert.jpg" alt="">
+        </div>
+    </div>
     <header>
         <div class="header-cont">
             <div class="logo">
@@ -23,12 +27,37 @@
             </div>
                 <ul class="nav">
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="index.html">О компании</a></li>
                     <li><a href="catalog.html">Каталог</a></li>
                     <li id="contacts"><a href="index.html#location">Контакты</a></li>
                 </ul>
         </div>
     </header>
+    <div id="slideout">
+        <img src="img/q.png" alt=""/>
+        <div id="slideout_inner">
+            <h4>Свяжитесь с нашим менеджером!</h4>
+            <br>
+            <div class="flat-block selected vc-item">
+                <div class="visit-card">
+                    <div class="photo">
+                        <img src="img/avatar.png">
+                    </div>
+                    <div class="info">
+                        <div class="manager">
+                            <div class="mname">Колпецова Юлия</div>
+                            <div class="position">Менеджер по продажам</div>
+                        </div>
+                        <hr>
+                        <div class="mphone">+7 (915) 767-40-43</div>
+                        <div class="mphone">+7 (49233) 5-14-01</div>
+                        <div class="mphone">+7 (920) 5-14-13</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
     <main>
         <section class="about">
             <div class="panel effect8" id="panel1">
@@ -90,56 +119,58 @@
                     <img class="btn-right" src="img/button.png">
                     <img src="img/pack.jpg">
                     <p>Упаковочные ткани</p>
-                    <button>Подробнее</button>
+                    <button class="detail" id='packing'>Подробнее</button>
                 </div>
                 <div class="product-card effect8">
                     <img class="btn" src="img/button.png">
                     <img class="btn-right" src="img/button.png">
                     <img src="img/sack.jpg">
                     <p>Мешочные ткани</p>
-                    <button>Подробнее</button>
+                    <button class="detail" id='packing.'>Подробнее</button>
                 </div>
                 <div class="product-card effect8">
                     <img class="btn" src="img/button.png">
                     <img class="btn-right" src="img/button.png">
                     <img src="img/bag.jpg">
                     <p>Мешки</p>
-                    <button>Подробнее</button>
+                    <button class="detail" id='bags'>Подробнее</button>
                 </div>
                 <div class="product-card effect8">
                     <img class="btn" src="img/button.png">
                     <img class="btn-right" src="img/button.png">
                     <img src="img/parus.jpg">
                     <p>Парусина полульняная</p>
-                    <button>Подробнее</button>
+                    <button class="detail" id='sailcloth'>Подробнее</button>
                 </div>
                 <div class="product-card effect8">
                     <img class="btn" src="img/button.png">
                     <img class="btn-right" src="img/button.png">
                     <img src="img/brezent1.jpg">
                     <p>Брезент</p>
-                    <button>Подробнее</button>
+                    <button class="detail" id='tarpaulin'>Подробнее</button>
                 </div>
                 <div class="product-card effect8">
                     <img class="btn" src="img/button.png">
                     <img class="btn-right" src="img/button.png">
                     <img src="img/brezent.jpg">
                     <p>Брезентовые полога</p>
-                    <button>Подробнее</button>
+                    <button class="detail" id='curtains'>Подробнее</button>
                 </div>
-                <div class="product-card effect8">
-                    <img class="btn" src="img/button.png">
-                    <img class="btn-right" src="img/button.png">
-                    <img src="img/gloves.jpg">
-                    <p>Брезентовые рукавицы</p>
-                    <button>Подробнее</button>
-                </div>
+                <!--
                 <div class="product-card effect8">
                     <img class="btn" src="img/button.png">
                     <img class="btn-right" src="img/button.png">
                     <img src="img/sew.jpg">
                     <p>Пошив</p>
-                    <button>Подробнее</button>
+                    <button class="detail" id="sew">Подробнее</button>
+                </div>
+                -->
+				<div class="product-card effect8" id='cert'>
+                    <img class="btn" src="img/button.png">
+                    <img class="btn-right" src="img/button.png">
+                    <img src="img/cert.jpg">
+                    <p>Все товары сертифицированы и соответствуют требованиям нормативных документов</p>
+                    <button id='show-cert'>Показать</button>
                 </div>
             </div>
         </section>
@@ -175,24 +206,22 @@
         </section>
         <section class="write-us">
             <h2 class="h2container effect8">Напишите нам прямо сейчас</h2>
-            <form action="" method="get">
-                <div class="name-and-email">
+            <form action="" method="post">
                     <div class="text-box1">
                         <span>Ваш E-mail</span>
-                        <input type="text" name="emale">
+                        <input type="text" name="email">
                     </div>
                     <div class="text-box2">
                         <span>Ваше имя</span>
                         <input type="text" name="name">
                     </div>
-                </div>
                 <div class="message-box">
                     <span>Сообщение</span>
-                    <textarea class="message"></textarea>
+                    <textarea class="message" name="message" ></textarea>
                 </div>
                 <div class="button-box">
-                    <button class="send-message">Отправить</button>
-                    <button class="clear">Очистить</button>
+                    <button class="send-message" type="submit">Отправить</button>
+                    <button class="clear" type="reset">Очистить</button>
                 </div>
             </form>
         </section>
@@ -202,5 +231,6 @@
     </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script src="scripts.js"></script>
 </html>
